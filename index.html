@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Africa</title>
+</head>
+<body>
+
+  <h1>Africa</h1>
+  <a href="#texto1">Texto1</a>
+  <a href="#texto2">Texto2</a>
+  <br>
+  <img src="./img1.jpg" weight="300" height="400">
+
+  <h2>Galeria de imagenes</h2>
+  <a href="./galeria.html">Imagenes relacionadas</a>
+  <br>
+  <a href="./galeria2.html" target="_blank">Más imagenes</a>
+
+  <h2 id="texto1">Texto1</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non enim laboriosam in aut amet repellat, eos aliquid dolores natus facilis nihil repudiandae velit a accusamus, eveniet nam sed consequuntur iste.</p>
+  
+  <h2 id="texto2">Texto2</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit earum sapiente nisi quos neque ea voluptatibus pariatur autem eius? Error reiciendis officiis tenetur, laudantium voluptates architecto ab rerum quod perferendis.</p>
+
+  <a href="https://www.tiendanube.com/blog/crear-pagina-quienes-somos/" target="_blank">Quienes somos?</a>
+  <br>
+  <a href="https://es.wikipedia.org/wiki/%C3%81frica" target="_blank">Información de interes</a>
+  <br>
+  <br>
+  Visitas de la pagina: <h2 id="Visitas"></h2>
+  <script>
+
+    let numeroVisitas = localStorage.getItem("Visitas")
+    if (numeroVisitas){
+      let contador = parseInt(numeroVisitas) + 1;
+      localStorage.setItem("Visitas", contador);
+      document.getElementById("Visitas").innerHTML = contador;
+    }else{
+      localStorage.setItem("Visitas", 1);
+      document.getElementById("Visitas").innerHTML = 1;
+    }
+
+    
+
+    var f = new Date();
+    document.write("Fecha : " +f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+    
+  </script>
+
+</body>
+</html>
